@@ -37,6 +37,8 @@ public class Main {
 
                 }
                 case 4 -> {// Dafne
+                    System.out.println("\n==== LISTA DE VEHICULOS =====");
+                    mostrarVehiculos(vehiculos);
 
                 }
                 case 5 -> {// Dante
@@ -52,5 +54,21 @@ public class Main {
         } while (opcion != 8);
 
         sc.close();
+    }
+
+
+    // FUNCIONES
+
+
+    // MOSTRAR VEHICULOS - OPCION 4
+    public static void mostrarVehiculos(List<Vehiculo> vehiculos){
+       if(vehiculos.isEmpty()){
+           System.out.println("No hay vehiculos registrados");
+           return;
+       }
+
+       for(Vehiculo vehiculo : vehiculos){
+           vehiculo.mostrarDetalle();
+       }
     }
 }
